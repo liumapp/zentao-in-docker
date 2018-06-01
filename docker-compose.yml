@@ -9,7 +9,7 @@ services:
       - ./mysql/data:/var/lib/mysql
       - ./mysql/conf/mysqld.conf:/etc/mysql/mysql.conf.d/mysqld.cnf
     ports:
-      - "6603:3306"
+      - "3306:3306"
     environment:
       - MYSQL_ROOT_PASSWORD=adminadmin
     networks:
@@ -20,6 +20,7 @@ services:
     image: nginx:1.13
     ports:
       - 80:80
+      - 8080:8080
       - 443:443
       - 5050:5050
       - 5553:5553
