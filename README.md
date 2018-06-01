@@ -3,6 +3,10 @@ Using docker-compose to deploy zentao in docker .
 
 ## how to use
 
+* update your /etc/hosts, add content below :
+
+	127.0.0.1 testc.com
+
 * run ``` docker-compose up -d ```
 
 	the php will auto install pdo_mysql and mysqli by himself. 
