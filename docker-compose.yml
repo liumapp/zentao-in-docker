@@ -41,7 +41,12 @@ services:
       - 9000
     networks:
       - zentao-server
-
+    command: 
+      - /bin/bash
+      - -c
+      - |
+          docker-php-ext-install pdo_mysql mysqli
+          php-fpm
 networks:
   zentao-server:
     driver: bridge
