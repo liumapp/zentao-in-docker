@@ -34,7 +34,6 @@ services:
     container_name: php5
     restart: always
     image: php:5.6-fpm
-    build: ./Dockerfile
     volumes:
       - ./www/:/var/www/
       - ./conf/php/:/usr/local/etc/php/conf.d/
