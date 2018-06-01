@@ -5,7 +5,7 @@ Using docker-compose to deploy zentao in docker .
 
 * update your /etc/hosts, add content below :
 
-	127.0.0.1 testc.com
+		127.0.0.1 testc.com
 
 * run ``` docker-compose up -d ```
 
