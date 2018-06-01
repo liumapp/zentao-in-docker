@@ -9,7 +9,7 @@ services:
       - ./mysql/data:/var/lib/mysql
       - ./mysql/conf/mysqld.conf:/etc/mysql/mysql.conf.d/mysqld.cnf
     ports:
-      - "3306:3306"
+      - 3306:3306
     environment:
       - MYSQL_ROOT_PASSWORD=adminadmin
     networks:
@@ -36,6 +36,7 @@ services:
     image: php:5.6-fpm
     volumes:
       - ./www/:/var/www/
+      - ./conf/php/:/usr/local/etc/php/conf.d/
     expose: 
       - 9000
     networks:
